@@ -36,6 +36,8 @@ function Header(){
                         
                         <NavDropdown.Item href="#action/3.4">SciFi</NavDropdown.Item>
                     </NavDropdown>
+                    <Nav.Link href="#home">TV Shows</Nav.Link>
+                    <Nav.Link href="#link">Events</Nav.Link>
                     </Nav>
                     <Form inline>
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
