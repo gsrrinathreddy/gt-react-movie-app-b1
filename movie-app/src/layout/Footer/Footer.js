@@ -40,6 +40,10 @@ function Footer(){
                         <li>Events</li>
                     </ul>
                 </div>
+                <div className="col-4">
+                     <h5>live showss</h5>
+                     
+                </div>
             </div>
            
         </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {Navbar,Nav,NavDropdown,Form,FormControl,Button} from 'react-bootstrap'
 function Header(){
     return (
@@ -8,8 +9,18 @@ function Header(){
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Movies</Nav.Link>
+                    <Nav.Link >
+                    <Link to="/home">
+                    Home
+                    </Link>
+                        
+                        </Nav.Link>
+                    <Nav.Link>
+                    <Link to="/movies">
+                    Movies
+                    </Link>
+                       
+                    </Nav.Link>
                     <NavDropdown title="Movies Categories" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Horror</NavDropdown.Item>
@@ -36,7 +47,13 @@ function Header(){
                         
                         <NavDropdown.Item href="#action/3.4">SciFi</NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link href="#home">TV Shows</Nav.Link>
+                    <Nav.Link >
+                        <Link to="/tv-shows">
+                        TV Shows
+                        </Link>
+                      
+
+                    </Nav.Link>
                     <Nav.Link href="#link">Events</Nav.Link>
                     </Nav>
                     <Form inline>
@@ -44,8 +61,17 @@ function Header(){
                     <Button variant="outline-success">Search</Button>
                     </Form>
                     <Nav>
-                        <Nav.Link href="#home">Login</Nav.Link>
-                        <Nav.Link href="#link">Register</Nav.Link>
+                        <Nav.Link >
+                            <Link to="/login">
+                            Login
+                            </Link>
+                           
+                        </Nav.Link>
+                        <Nav.Link >
+                         <Link to="/register">
+                                 Register
+                            </Link>
+                           </Nav.Link>
                         <NavDropdown title="Language" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Telugu</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Hindi</NavDropdown.Item>
