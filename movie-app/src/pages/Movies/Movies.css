@@ -1,4 +1,12 @@
 .movies{
-    background: red;
-    color: blue;
+    padding: 50px  50px ;
+    background:#771796;
+}
+.row{
+    padding: 15px 10px 15px 10px;
+    margin:15px 10px 15px 10px ;
+}
+.tab-container{
+   
+    padding: 10px 10% 10px 10%;
 }

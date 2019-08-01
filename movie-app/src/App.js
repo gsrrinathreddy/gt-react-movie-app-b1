@@ -35,5 +35,6 @@ function App() {
     </div>
   );
 }
-
+const AppInstance = new App();
+console.log("Hi I am App",AppInstance)
 export default App;
