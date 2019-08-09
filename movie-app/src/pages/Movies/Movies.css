@@ -1,12 +1,15 @@
 .movies{
     padding: 50px  50px ;
-    background:#771796;
+    background:lightgoldenrodyellow;
 }
 .row{
     padding: 15px 10px 15px 10px;
     margin:15px 10px 15px 10px ;
 }
 .tab-container{
-   
+   color: blue;
     padding: 10px 10% 10px 10%;
+}
+.nav-item.nav-link{
+    color:blue;
 }

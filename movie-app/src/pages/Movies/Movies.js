@@ -5,7 +5,9 @@ import axios from 'axios';
 import './Movies.css';
 import Axios from 'axios';
 import Post from '../../components/post/Post';
+import LanguageContext from '../../layout/LandingPage/LanguageContext';
 class Movies extends Component{
+    static contextType = LanguageContext;
     constructor(){
         super();
         this.state={
@@ -16,14 +18,15 @@ class Movies extends Component{
     }
     
     getPosts(){ 
-        console.log("the posts data is",this.state.a)
-        this.setState({a:6});
+        
+        // this.setState({a:6});
        
-        const url = "https://jsonplaceholder.typicode.com/photos";
+        const url = "https://jsonplaceholder.typicode.com/posts";
         axios.get(url)
              .then(res =>{
+                 console.log("posts data",res.data)
                  this.setState({posts:res.data});
-                 console.log("the posts data is",this.state.posts)
+                 console.log("this.state.posts",this.state.posts)
              }).catch(err => console.log(err));
 
              console.log("the posts data is",this.state.a)
@@ -50,14 +53,16 @@ class Movies extends Component{
         console.log("Hi Users is Clicked")
     }
     render(){
-
-       let postCardItemsData = this.state.posts;
-       console.log("postCard",postCardItemsData)
+        //console.log("this movies", this.context)
+       let postsData = this.state.posts;
+      // console.log("postCard",postsData[0])
        
-       let PostCmponent = postCardItemsData.map(post=>{
-           return <Post title={post.title} body={post.body} url={post.url}/>
+       let myPosts = postsData.map(post=>{
+         //  console.log("In Map function",post.title)
+           return <Post title={post.title} body={post.body} />
        })
 
+        console.log(myPosts)
 
         return(
         <div className="movies">
@@ -68,7 +73,7 @@ class Movies extends Component{
               </Button>
                 <div className="row">
                 
-                {PostCmponent}
+               {myPosts}
                 
                 </div>
                 
